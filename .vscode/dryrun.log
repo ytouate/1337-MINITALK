@@ -1,0 +1,13 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/ytouate/Desktop/minitalk'
+gcc -Wall -Wextra -Werror   -c -o ft_atoi.o ft_atoi.c
+ 
+gcc -Wall -Wextra -Werror   -c -o ft_putchar.o ft_putchar.c
+gcc -Wall -Wextra -Werror   -c -o ft_putstr.o ft_putstr.c
+gcc -Wall -Wextra -Werror   -c -o ft_putnbr.o ft_putnbr.c
+gcc -Wall -Wextra -Werror -c ft_atoi.c ft_putchar.c ft_putstr.c ft_putnbr.c
+ar -rc minitalk.a ft_atoi.o ft_putchar.o ft_putstr.o ft_putnbr.o
+gcc -Wall -Wextra -Werror client.c minitalk.a -o client
+gcc -Wall -Wextra -Werror server.c minitalk.a -o server
+make: Leaving directory `/Users/ytouate/Desktop/minitalk'
+ 

@@ -6,7 +6,7 @@
 /*   By: ytouate <ytouate@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:02:39 by ytouate           #+#    #+#             */
-/*   Updated: 2022/01/06 15:53:26 by ytouate          ###   ########.fr       */
+/*   Updated: 2022/01/31 13:22:27 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ void	ft_putnbr(int nb);
 void	ft_putstr(char *str);
 void	ft_putchar(char c);
 int		ft_atoi(const char *str);
+size_t	ft_strlen(const char *s);
 
 #endif
