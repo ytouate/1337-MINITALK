@@ -33,16 +33,10 @@ $(NAME) : $(OBJS)
 	@$(CC) $(CFLAGS) client.c $(NAME) -o client
 	@$(CC) $(CFLAGS) server.c $(NAME) -o server
 
-bonus:
-	@$(CC) $(CFLAGS) -c $(FILES)
-	@$(AR) $(NAME) $(OBJS)
-	@$(CC) $(CFLAGS) client_bonus.c $(NAME) -o client_bonus
-	@$(CC) $(CFLAGS) server_bonus.c $(NAME) -o server_bonus
-
 clean :
 	$(RM) $(OBJS)
 
 fclean : clean
-	$(RM)  $(NAME) client server client_bonus server_bonus
+	$(RM)  $(NAME) client server
 
 re : fclean all
