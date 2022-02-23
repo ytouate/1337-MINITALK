@@ -1,9 +1,0 @@
-make --dry-run --keep-going --print-directory
-make: Entering directory `/Users/ytouate/Desktop/mini'
-gcc -Wall -Wextra -Werror   -c -o utils.o utils.c
-gcc -Wall -Wextra -Werror -c utils.c
-ar -rc minitalk.a utils.o
-gcc -Wall -Wextra -Werror client.c minitalk.a -o client
-gcc -Wall -Wextra -Werror server.c minitalk.a -o server
-make: Leaving directory `/Users/ytouate/Desktop/mini'
- 
