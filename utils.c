@@ -1,17 +1,58 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ytouate <ytouate@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 15:51:27 by ytouate           #+#    #+#             */
-/*   Updated: 2022/01/06 16:00:05 by ytouate          ###   ########.fr       */
+/*   Created: 2022/02/23 10:34:15 by ytouate           #+#    #+#             */
+/*   Updated: 2022/02/23 10:34:57 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 #include "minitalk_bonus.h"
+
+void	ft_putstr(char *str)
+{
+	int	i;
+
+	if (!str)
+		return (ft_putstr("(null)"));
+	i = 0;
+	while (str[i])
+	{
+		ft_putchar (str[i]);
+		i++;
+	}
+}
+
+void	ft_putnbr(int nb)
+
+{
+	long	i;
+
+	i = nb;
+	if (i < 0)
+	{
+		ft_putchar ('-');
+		i *= -1;
+	}
+	if (i > 9)
+	{
+		ft_putnbr (i / 10);
+		ft_putnbr (i % 10);
+	}
+	if (i >= 0 && i <= 9)
+	{
+		ft_putchar (i + '0');
+	}
+}
+
+void	ft_putchar(char c)
+{
+	write (1, &c, 1);
+}
 
 int	ft_atoi(const char *str)
 {

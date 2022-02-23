@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   client.c                                           :+:      :+:    :+:   */
+/*   client_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ytouate <ytouate@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/05 17:05:59 by ytouate           #+#    #+#             */
-/*   Updated: 2022/01/06 16:44:17 by ytouate          ###   ########.fr       */
+/*   Created: 2022/01/06 15:18:25 by ytouate           #+#    #+#             */
+/*   Updated: 2022/01/06 17:31:48 by ytouate          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
+#include "minitalk_bonus.h"
 
-void	send_char(int pid, char c)
+static void	send_char(int pid, char c)
 {
 	int	i;
 
